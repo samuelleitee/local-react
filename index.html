@@ -17,14 +17,14 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      function Button() {
+      const Button = () => {
         const [total, setTotal] = React.useState(0);
         return (
           <button onClick={() => setTotal(total + 1)}>Adicionar {total}</button>
         );
       }
 
-      function App() {
+      const App = () => {
         return (
           <div>
             <h1>Aplicativo React</h1>
