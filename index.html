@@ -20,9 +20,37 @@
       const MainNav = () => {
         return (
           <nav>
-            <a href="#">Link 1</a>
+            <ul>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+              <li>
+                <a href="#">Link 1</a>
+              </li>
+            </ul>
+
             <Button />
           </nav>
+        );
+      };
+
+      const Produtos = () => {
+        const produto1 = "Camisa";
+        const produto2 = "Bermuda";
+
+        function handleClick(event) {
+          console.log(event.target.innerText)
+        }
+
+        return (
+          <div>
+            <button onClick={handleClick}>
+              {produto1} - {Math.random() * 100}
+            </button>
+            <button onClick={handleClick}>
+              {produto2} - {Math.random() * 100}
+            </button>
+          </div>
         );
       };
 
@@ -36,8 +64,8 @@
       const App = () => {
         return (
           <div>
-            <h1>Aplicativo React</h1>
-
+            <MainNav />
+            <Produtos />
             <Button />
           </div>
         );
