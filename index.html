@@ -17,12 +17,21 @@
     <div id="root"></div>
 
     <script type="text/babel">
+      const MainNav = () => {
+        return (
+          <nav>
+            <a href="#">Link 1</a>
+            <Button />
+          </nav>
+        );
+      };
+
       const Button = () => {
         const [total, setTotal] = React.useState(0);
         return (
           <button onClick={() => setTotal(total + 1)}>Adicionar {total}</button>
         );
-      }
+      };
 
       const App = () => {
         return (
@@ -32,7 +41,7 @@
             <Button />
           </div>
         );
-      }
+      };
 
       const container = document.getElementById("root");
       const root = ReactDOM.createRoot(container);
