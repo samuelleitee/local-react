@@ -39,7 +39,7 @@
         const produto2 = "Bermuda";
 
         function handleClick(event) {
-          console.log(event.target.innerText)
+          console.log(event.target.innerText);
         }
 
         return (
@@ -61,12 +61,27 @@
         );
       };
 
+      const Comprar = () => {
+        const [count, setCount] = React.useState(5);
+        function handleClick() {
+          setCount(count + 1);
+        }
+
+        return (
+          <div>
+            <button onClick={handleClick}>Comprar: {count}</button>
+            <p>Total: {count}</p>
+            <p>Preço: {count}</p>
+          </div>
+        );
+      };
+
       const App = () => {
         return (
           <div>
             <MainNav />
             <Produtos />
-            <Button />
+            <Comprar />
           </div>
         );
       };
