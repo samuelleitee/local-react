@@ -30,16 +30,24 @@
           <>
             <input type="text" />
           </>
-        )
-      }
+        );
+      };
+
+      const Button = ({ children }) => {
+        return <button>{children}</button>;
+      };
 
       const App = () => {
         return (
           <div>
             <Header title="Form" />
             <Input />
+            <br />
             <Input />
+            <br />
             <Input />
+            <br />
+            <Button>Send Form</Button>
           </div>
         );
       };
